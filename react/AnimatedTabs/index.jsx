@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 
 // const list = ['O', 'Two', 'Three', 'Fourrr', 'FIveeeeeee'];
 
-const AnimatedTab = ({ types, setType }) => {
+const AnimatedTab = ({ items, setItems }) => {
   const inkBarRef = useRef();
   const containerRef = useRef();
   const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -21,7 +21,7 @@ const AnimatedTab = ({ types, setType }) => {
     animateInkBar(0, firstChildWidth);
   }
 
-  const handleTabChanges = (e, index, galleryType) => {
+  const handleTabChanges = (e, index, clickedItem) => {
     if (index === activeTabIndex) {
       return;
     }
@@ -32,7 +32,7 @@ const AnimatedTab = ({ types, setType }) => {
     animateInkBar(dist, clickedItemWidth);
 
     setActiveTabIndex(index);
-    setType(galleryType);
+    setItems(clickedItem);
   }
 
 
@@ -65,7 +65,7 @@ const AnimatedTab = ({ types, setType }) => {
     <div className="flex justify-center">
       <div className="relative">
         <div ref={containerRef} className="flex border-b-[1px] border-b-[#ddd] w-fit">
-          {types.map((item, index) => (
+          {items.map((item, index) => (
             <button key={index} className="cursor-pointer w-full py-2 px-5 text-[#303030] uppercase text-base font-normal
             tracking-wider" onClick={(e) => handleTabChanges(e, index, item)}>
               {item}
