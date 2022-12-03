@@ -25,7 +25,7 @@ const AnimatedTab = ({ items, setItems }) => {
     if (index === activeTabIndex) {
       return;
     }
-// test commit
+
     const clickedItemWidth = e.target.getBoundingClientRect().width;
     const dist = getDistanceToTranslate(index);
 
