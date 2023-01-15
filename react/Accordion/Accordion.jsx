@@ -52,7 +52,7 @@ const Accordion = () => {
   }
 
   /** 
-    @description sets the given height to the accordion.
+    @description sets the height of the accordion.
   */
   const setHeight = (height) => {
     listRef.current.style.height = `${height}px`;
