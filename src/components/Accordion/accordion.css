@@ -1,0 +1,22 @@
+.accordion-container{
+  box-sizing: border-box;
+}
+.accordion-container .list{
+  list-style-type: none;
+  background: black;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 10px;
+  transition: height 250ms ease-in-out;
+  height: 0px;
+  overflow: hidden;
+}
+
+.list li{
+  background: #ddd;
+  cursor: pointer;
+  padding: 10px;
+}
+
