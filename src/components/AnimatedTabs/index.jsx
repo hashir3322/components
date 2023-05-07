@@ -1,8 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 
-// const list = ['O', 'Two', 'Three', 'Fourrr', 'FIveeeeeee'];
 
-const AnimatedTab = ({ items, setItems }) => {
+const AnimatedTab = (/*{ items, setItems }*/) => {
+  const items = ['O', 'Two', 'Three', 'Fourrr', 'FIveeeeeee'];
   const inkBarRef = useRef();
   const containerRef = useRef();
   const [activeTabIndex, setActiveTabIndex] = useState(0);
@@ -32,7 +32,7 @@ const AnimatedTab = ({ items, setItems }) => {
     animateInkBar(dist, clickedItemWidth);
 
     setActiveTabIndex(index);
-    setItems(clickedItem);
+    // setItems(clickedItem);
   }
 
 
